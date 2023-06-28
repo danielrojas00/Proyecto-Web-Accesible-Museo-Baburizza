@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100vw, initial-scale=1">
+     <title> Museo Baburizza Accesible</title>
+    </head>
+
+    <header>
+  <div class="menunaveg">
+        <div class="logo"> <a href="#">
+        <img src="LOGO BABURIZZA DEF.png" alt="Logo Palacio Baburizza" width="100px" height="40px"> </a>
+        </div>
+        <div class="busqueda">
+            <a href="#"> <img src="iconobusqueda400wgt.svg" alt="Búsqueda"  width="24px" height="24px"> </a>
+        </div>
+    </div>
+
+<ul class="menuresponsive">
+            <li class="logoresponsive"> <a href="#">
+            <img src="LOGO BABURIZZA DEF.png" alt="Logo Palacio Baburizza" width="100px" height="40px"> </a>
+            </li>
+            <li class="busquedaresponsive">
+                <a href="#"> <img src="iconobusqueda400wgt.svg" alt="Búsqueda"  width="24px" height="24px"> </a>
+            </li>
+        </ul>
+</header>
+
+<body>
+
+<link rel="stylesheet" href="styles.css"/>
+<div class="juventud">
+ <img src="Juventud-Tentada.jpg" alt=" La Juventud Tentada por los Vicios" height="100%" width="100%">
+</div>
+
+
+<div class="contenedordebotones"> 
+    <div class="botondetexto">
+        <div class="iconotexto"> <img src="edit_FILL0_wght400_GRAD0_opsz48.svg" height="20px"  width="20px">
+        </div>
+        <div class="textodeboton">Texto</div>
+    </div>
+    <div class="botondeaudio">
+            <div class="iconodeaudio"> <img src="edit_FILL0_wght400_GRAD0_opsz48.svg" height="20px" width="20px">
+            </div>
+            <div class="textodeaudio"> Audio</div>
+    </div>
+</div> 
+
+</div>
+<div class="opaudio"> 
+     
+        <div class="tituloopaudio">
+            Audio
+        </div>
+
+    
+    <div class="playpausa">
+     <div class="play" onclick="playaudio2()" type="button"><img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+     <div class="pausar"  onclick="pauseaudio2()" type="button"><img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+        <audio id="Audio1">
+        <source src="the-introvert-michael-kobrin-10959.mp3" type="Audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="contenedorprogreso">  
+   <input type="range" value="0"  class="progreso" oninput="updateProgress(this.value)"> 
+  
+   </div>
+   <div class="tiempos">
+        <span class="tiempoactual">0:00</span>
+        <span class="tiempototal">0:00</span>
+        </div>
+        
+    <div class="contenedordeVoz" >
+            <div class="textovoz">Tipo de Voz</div>
+        </div>
+        <div class="contenedordeVelocidad">
+            <div class="textovelocidad"> Velocidad </div>  
+        </div>
+        
+ </div>
+
+<div class="cajaopvelocidad"> 
+    <div class="velocidadtitulo">
+        Velocidad
+        <div class="flecharetroceso" id="flecharetroceso"><img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px"> </div>
+    </div>
+    <div class="velocidadopcion1">x1.0</div>
+    <div class="velocidadopcion2">x1.5</div>
+    <div class="velocidadopcion3">x2.0</div>
+</div>
+
+<div class="cajaopvoz" id="cajaopvoz"> 
+    
+    <div class="voztitulo">
+        Tipo de Voz
+        <div class="flecharetroceso" id="flecharetroceso">
+        <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+    </div>
+    </div>
+    <div class="vozopcion1">Por Defecto</div>
+    <div class="vozopcion2">Femenina</div>
+    <div class="vozopcion3">Masculina</div>
+</div>
+<div class="cajaoptexto"> 
+        <div class="textotitulo">
+            Texto
+            <div class="flecharetroceso">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+        </div>
+        </div>
+        <div class="textoopcion1"> Contraste de Fondo</div>
+        <div class="textoopcion2">Tamaño</div>
+</div>
+
+<div class="cajaopcontraste">
+        <div class="contrastetitulo">
+            Contraste de Fondo
+            <div class="flecharetroceso">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+        </div>
+        </div>
+        <div class="contrasteopcion1">
+            Claro
+        </div>
+        <div class="contrasteopcion2">
+            Oscuro
+        </div>
+</div>
+
+<div class="cajaoptamano">
+            <div class="tamanotitulo">
+            Tamaño
+            <div class="flecharetroceso">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px">
+            </div>
+            </div>
+            <div class="tamanoopcion1">
+                Por Defecto
+            </div>
+            <div class="tamanoopcion2">
+                Grande
+            </div>
+            <div class="tamanoopcion3">
+               Muy Grande
+            </div>
+</div>
+
+
+   <div id="datos-obra"></div>
+
+
+      <div class="contenedor-up">
+        <div class="iconodeubicacion"><img src="location_on_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px"></div>
+        <div class="txt-up">Ubicación de pintura</div>
+      </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+</style>
+
+
+<div class="obrasSimilares">
+        <div class="textoobrassimilares">
+            <h2>Obras Similares</h2>
+            <p> Cuadros y Esculturas que podrían Interesarte</p>
+</div>
+
+<div class="linkb">
+    <div class="linka">
+     Volver a <u>museobaburizza.cl</u>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .slider-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .slider-item {
+      flex: 0 0 auto;
+      margin: 0 10px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .slider-item img {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+    }
+    
+    .slider-btn-container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+    
+    .slider-btn-container .slider-btn {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      pointer-events: auto;
+    }
+    
+    .slider-btn-container .slider-btn:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .slider-btn-container .slider-btn.prev {
+      margin-right: 10px;
+    }
+    
+    .slider-btn-container .slider-btn.next {
+      margin-left: 10px;
+    }
+    
+    .slider-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s;
+      pointer-events: none;
+    }
+    
+    .slider-container:hover .slider-overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    
+    .slider-container:hover .slider-btn-container .slider-btn {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .slider-container:hover .slider-btn-container .slider-btn:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slider-item">
+        <img src="marina_de_valparaiso_-_alberto_valenzuela_llanos.jpg" alt="Image 1" width="240px" height="100px">
+      </div>
+      <div class="slider-item">
+        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Image 2" width="240px" height="100px">
+      </div>
+      <div class="slider-item">
+        <img src="antiguo_muelle_prat_-_thomas_jacques_somerscales.tif_.jpg" alt="Image 3" width="240px" height="100px">
+      </div>
+    </div>
+    <div class="slider-overlay"></div>
+    <div class="slider-btn-container">
+      <div class="slider-btn prev">&#8249;</div>
+      <div class="slider-btn next">&#8250;</div>
+    </div>
+  </div>
+
+  <script>
+    const sliderContainer = document.querySelector('.slider-container');
+    const slider = document.querySelector('.slider');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0 || index >= sliderItems.length) {
+        return;
+      }
+
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+
+    function showPrevSlide() {
+      const prevIndex = currentIndex - 1;
+      if (prevIndex >= 0) {
+        showSlide(prevIndex);
+      }
+    }
+
+    function showNextSlide() {
+      const nextIndex = currentIndex + 1;
+      if (nextIndex < sliderItems.length) {
+        showSlide(nextIndex);
+      }
+    }
+
+    prevBtn.addEventListener('click', showPrevSlide);
+    nextBtn.addEventListener('click', showNextSlide);
+
+    // Center current slide
+    function centerCurrentSlide() {
+      const sliderWidth = sliderContainer.clientWidth;
+      const itemWidth = sliderItems[0].clientWidth;
+      const margin = 20;
+      const containerWidth = (itemWidth + margin * 2) * sliderItems.length;
+      const currentSlideWidth = itemWidth + margin * 2;
+
+      if (containerWidth > sliderWidth) {
+        const offset = (sliderWidth - currentSlideWidth) / 2;
+        const translateX = -currentIndex * (itemWidth + margin * 2) + offset;
+        slider.style.transform = `translateX(${translateX}px)`;
+      }
+    }
+
+    window.addEventListener('resize', centerCurrentSlide);
+    centerCurrentSlide();
+  </script>
+</body>
+</html>
+
+
+
+
+<script>
+    fetch('datosdeobra.json')
+  .then(response => response.json())
+  .then(data => {
+    // Accede a los datos del archivo JSON y genera el contenido HTML
+    const titulo = data.Titulo;
+    const descripcion = data.Descripcion;
+    const autor = data.Autor;
+    const coleccion = data.Coleccion;
+    const dimensiones = data.Dimensiones;
+    const tecnica = data.Tecnica;
+    const datosObraDiv = document.getElementById('datos-obra');
+    datosObraDiv.innerHTML = `
+    <h2>${titulo}</h2>
+    <p>${descripcion}</p>
+    <p>Autor:${autor}</p>
+    <p> Colección:${coleccion} </p>
+    <p> Dimensiones${dimensiones} </p>
+    <p> Técnica:${tecnica} </p>
+    `;
+  })
+  .catch(error => {
+    console.error('Error al cargar los datos:', error);
+  });
+</script>
+
+<script src="Interaccion.js"> </script>
+
+</body>
+</html>
