@@ -1,7 +1,9 @@
 
 html {font-size: 100%;} /*16px*/
 
-
+.botonesaudio1-0{
+  background-color: #3B2C21;
+}
 .menunaveg{
     background-color: #3B2C21;
     display: flex;

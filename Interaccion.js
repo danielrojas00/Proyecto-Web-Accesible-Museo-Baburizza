@@ -295,3 +295,76 @@ function updateCarouselPosition() {
 window.addEventListener('resize', updateCarouselPosition);
 updateCarouselPosition();
 
+
+// Audio Pausar y Play //
+const spkbtn =document.querySelector('.audio1-0vol')
+const pausebtn= document.querySelector('.audio1-0pause')
+const playbtn = document.querySelector('.audio1-0play')
+
+const audio10 = document.querySelector('.audio10')
+const velaudio1= document.querySelector('.velocidadopcion1')
+
+const velaudio2= document.querySelector('.velocidadopcion2')
+const audio15= document.querySelector('.audio15')
+
+const velaudio3 = document.querySelector('.velocidadopcion3')
+const audio20 = document.querySelector('.audio20')
+
+
+playbtn.style.display='none'
+pausebtn.style.display='none'
+
+//Desde iCONO // 
+spkbtn.addEventListener('click', ()=>{
+    spkbtn.style.display = 'none';
+    pausebtn.style.display='flex';
+    audio10.play();
+})
+
+
+
+
+//Primera opcion//
+// entramos desde el boton de audio x1.0  para reproducir MOSTRAR//
+velaudio1.addEventListener('click', ()=>{
+  audio10.play();
+  audio15.pause(); // para que no se reproduzcan al mismo tiempo//
+  audio20.pause();
+  spkbtn.style.display = 'none'
+  pausebtn.style.display = 'flex'
+  if (pausebtn === 'flex'){
+    playbtn.style.display = 'none'}
+})
+
+pausebtn.addEventListener('click',()=>{
+  audio10.pause();
+  pausebtn.style.display = 'none'
+  playbtn.style.display = 'flex'
+})
+playbtn.addEventListener('click', ()=>{
+  audio10.play();
+  pausebtn.style.display = 'flex'
+  playbtn.style.display = 'none'
+})
+//Segunda Opcion // 
+
+velaudio2.addEventListener('click', ()=>{
+  audio15.play();
+  audio10.pause(); // para que no se reproduzcan al mismo tiempo//
+  audio20.pause();
+  spkbtn.style.display = 'none'
+  pausebtn.style.display = 'flex'
+  if (pausebtn === 'flex'){
+    playbtn.style.display = 'none'}
+})
+
+pausebtn.addEventListener('click',()=>{
+  audio15.pause();
+  pausebtn.style.display = 'none'
+  playbtn.style.display = 'flex'
+})
+playbtn.addEventListener('click', ()=>{
+  audio15.play();
+  pausebtn.style.display = 'flex'
+  playbtn.style.display = 'none'
+})
