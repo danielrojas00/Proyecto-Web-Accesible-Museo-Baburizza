@@ -238,18 +238,60 @@ const formatTime = (time) =>{
 }
 Musica();
 
-var currentSlide = 0;
-var slides = document.querySelectorAll('.carousel-item');
 
-function changeSlide(direction) {
-  slides[currentSlide].classList.remove('active');
-  currentSlide += direction;
-  
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  } else if (currentSlide >= slides.length) {
-    currentSlide = 0;
+const carouselTrack = document.querySelector('.carousel__track');
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+
+carouselTrack.addEventListener('mousedown', dragStart);
+carouselTrack.addEventListener('touchstart', dragStart);
+carouselTrack.addEventListener('mouseup', dragEnd);
+carouselTrack.addEventListener('mouseleave', dragEnd);
+carouselTrack.addEventListener('touchend', dragEnd);
+carouselTrack.addEventListener('mousemove', drag);
+carouselTrack.addEventListener('touchmove', drag);
+
+function dragStart(event) {
+  if (event.type === 'touchstart') {
+    startPos = event.touches[0].clientX;
+  } else {
+    startPos = event.clientX;
+    event.preventDefault();
   }
-  
-  slides[currentSlide].classList.add('active');
+  isDragging = true;
 }
+
+function drag(event) {
+  if (isDragging) {
+    let currentPosition = 0;
+    if (event.type === 'touchmove') {
+      currentPosition = event.touches[0].clientX;
+    } else {
+      currentPosition = event.clientX;
+    }
+    const diff = currentPosition - startPos;
+    currentTranslate = prevTranslate + diff;
+  }
+}
+
+function dragEnd() {
+  prevTranslate = currentTranslate;
+  isDragging = false;
+}
+
+function updateCarouselPosition() {
+  const carouselWidth = carouselTrack.offsetWidth;
+  const cardsWidth = Array.from(carouselTrack.children).reduce(
+    (totalWidth, card) => totalWidth + card.offsetWidth + 20, // 20px margin-right
+    0
+  );
+  const maxTranslate = carouselWidth - cardsWidth;
+  currentTranslate = Math.max(Math.min(currentTranslate, 0), maxTranslate);
+  carouselTrack.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+window.addEventListener('resize', updateCarouselPosition);
+updateCarouselPosition();
+

@@ -33,19 +33,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css"/>
-<div class="botonesaudio1-0" >
-<img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px">
-<img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg">
-</div>
 
-<div class="botonesaudio1-5">
-<img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg"height="40px" width="40px">
+<div class="botonesaudio1-0">
+<img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px">
 <img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px">
 </div>
-
-<div class="botonesaudio2-0">
-<img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg"height="40px" width="40px">
-<img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg"height="40px" width="40px">
 
 
 </div>
@@ -171,18 +163,10 @@
 
    <div id="datos-obra"></div>
 
-
-
-
       <div class="contenedor-up">
         <div class="iconodeubicacion"><img src="location_on_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px"></div>
         <div class="txt-up">Ubicación de pintura</div>
       </div>
-
-
-      
-
-
 <div class="obrasSimilares">
         <div class="textoobrassimilares">
             <h2>Obras Similares</h2>
@@ -195,158 +179,34 @@
     </div>
 </div>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    .slider-container {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-    
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    
-    .slider-item {
-      flex: 0 0 auto;
-      margin: 0 10px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    
-    .slider-item img {
-      display: block;
-      width: 100%;
-      border-radius: 8px;
-    }
-    
-    .slider-btn-container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
-      pointer-events: none;
-    }
-    
-    .slider-btn-container .slider-btn {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      font-size: 24px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      pointer-events: auto;
-    }
-    
-    .slider-btn-container .slider-btn:hover {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    
-    .slider-btn-container .slider-btn.prev {
-      margin-right: 10px;
-    }
-    
-    .slider-btn-container .slider-btn.next {
-      margin-left: 10px;
-    }
-        
-    
-    .slider-container:hover .slider-btn-container .slider-btn {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    
-    .slider-container:hover .slider-btn-container .slider-btn:hover {
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-  </style>
-</head>
-<body>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slider-item">
-        <img src="marina_de_valparaiso_-_alberto_valenzuela_llanos.jpg" alt="Image 1" width="240px" height="100px">
+<div class="carousel-wrapper">
+  <div class="carousel">
+    <div class="carousel__track">
+      <div class="carousel__card">
+        <img src="antiguo_muelle_prat_-_thomas_jacques_somerscales.tif_.jpg" alt="Imagen 1" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 1</h2>
+        <p class="carousel__author">Autor de la Imagen 1</p>
       </div>
-      <div class="slider-item">
-        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Image 2" width="240px" height="100px">
+      <div class="carousel__card">
+        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Imagen 2" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 2</h2>
+        <p class="carousel__author">Autor de la Imagen 2</p>
       </div>
-      <div class="slider-item">
-        <img src="antiguo_muelle_prat_-_thomas_jacques_somerscales.tif_.jpg" alt="Image 3" width="240px" height="100px">
+      <div class="carousel__card">
+        <img src="marina_de_valparaiso_-_alberto_valenzuela_llanos.jpg" alt="Imagen 3" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 3</h2>
+        <p class="carousel__author">Autor de la Imagen 3</p>
       </div>
-    </div>
-    <div class="slider-overlay"></div>
-    <div class="slider-btn-container">
-      <div class="slider-btn prev">&#8249;</div>
-      <div class="slider-btn next">&#8250;</div>
+      <div class="carousel__card">
+        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Imagen 4" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 4</h2>
+        <p class="carousel__author">Autor de la Imagen 4</p>
+      </div>
     </div>
   </div>
+</div>
 
-  <script>
-    const sliderContainer = document.querySelector('.slider-container');
-    const slider = document.querySelector('.slider');
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
 
-    let currentIndex = 0;
-
-    function showSlide(index) {
-      if (index < 0 || index >= sliderItems.length) {
-        return;
-      }
-
-      slider.style.transform = `translateX(-${index * 100}%)`;
-      currentIndex = index;
-    }
-
-    function showPrevSlide() {
-      const prevIndex = currentIndex - 1;
-      if (prevIndex >= 0) {
-        showSlide(prevIndex);
-      }
-    }
-
-    function showNextSlide() {
-      const nextIndex = currentIndex + 1;
-      if (nextIndex < sliderItems.length) {
-        showSlide(nextIndex);
-      }
-    }
-
-    prevBtn.addEventListener('click', showPrevSlide);
-    nextBtn.addEventListener('click', showNextSlide);
-
-    // Center current slide
-    function centerCurrentSlide() {
-      const sliderWidth = sliderContainer.clientWidth;
-      const itemWidth = sliderItems[0].clientWidth;
-      const margin = 20;
-      const containerWidth = (itemWidth + margin * 2) * sliderItems.length;
-      const currentSlideWidth = itemWidth + margin * 2;
-
-      if (containerWidth > sliderWidth) {
-        const offset = (sliderWidth - currentSlideWidth) / 2;
-        const translateX = -currentIndex * (itemWidth + margin * 2) + offset;
-        slider.style.transform = `translateX(${translateX}px)`;
-      }
-    }
-
-    window.addEventListener('resize', centerCurrentSlide);
-    centerCurrentSlide();
-  </script>
-</body>
-</html>
 
 
 <script>
@@ -380,9 +240,7 @@
   });
 </script>
 
-<audio>
-  <source src="Voz Hombre 1.0.mp3" type="Audio/mpeg">
-</audio>
+
 
 <script src="Interaccion.js"> </script>
 
