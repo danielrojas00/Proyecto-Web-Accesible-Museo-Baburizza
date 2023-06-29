@@ -6,16 +6,23 @@ const modificar = document.querySelector('.opaudio')
 const ocultar1 = document.querySelector('.contenedordebotones')
 //* ocultar elemento *//
 modificar.style.display = 'none'
-
 //* elemento inicial es el boton, ya que este se desplegara el evento cuando se, en este caso cliquea, para luego ejecutar la funcion, que en este caso muestra el elemento *//
 cli.addEventListener ('click', ()=> {
     modificar.style.display ='flex'
     ocultar1.style.display ='none'
 }
 )
+//retroceso desde opciones de audio a Botones//
+const retrocederr = document.querySelector('.rtraudio')
+
+retrocederr.addEventListener('click', ()=>{
+    modificar.style.display='none'
+    ocultar1.style.display='flex'
+})
 
 
-//Seleccionar//
+//CAJA DE AUDIO GRAL A OP VELOCIDAD//
+//Seleccionar elementos a mostrar y ocultar//
 
 const velselec = document.querySelector('.contenedordeVelocidad')
 const copvelocidad = document.querySelector('.cajaopvelocidad')
@@ -29,14 +36,19 @@ velselec.addEventListener ('click', () => {
     copvelocidad.style.display = 'flex';
 }
 )
-
 //ocultar el contenedor de opciones de audio general // 
 velselec.addEventListener('click', () =>{
     modificar.style.display = 'none';
 }
 )
+//RETROCESO//   
+const rtropvelocidad = document.querySelector('.rtropvelocidad')
 
-
+rtropvelocidad.addEventListener('click', ()=>{
+    copvelocidad.style.display='none';
+    modificar.style.display='flex';
+}
+)
 
 
 
@@ -59,6 +71,12 @@ btnvoz.addEventListener('click', ()=>{
 btnvoz.addEventListener('click', ()=>{
     modificar.style.display = 'none'
 })
+//RETROCESO TIPO DE VOZ A OP Audio//
+const rtrvoz = document.querySelector('.rtrvoz')
+rtrvoz.addEventListener('click', ()=>{
+    opvoz.style.display = 'none';
+    modificar.style.display='flex'
+})
 
 
 
@@ -78,7 +96,12 @@ seltxtbtn.addEventListener('click', ()=>{
     seltxtop.style.display = 'flex'
     ocultar1.style.display = 'none'
 })
-
+//Retroceso MENU TEXTO => BOTONES//
+const rtrtexto = document.querySelector('.rtrtexto')
+rtrtexto.addEventListener('click',()=>{
+    ocultar1.style.display = 'flex'
+    seltxtop.style.display = 'none'
+})
 
 
 // BOTON DE MENU DE TEXTO HACIA OPCIONES DE CONTRASTE //
@@ -97,6 +120,15 @@ slcbtnoptxt.addEventListener('click', ()=>{
     seltxtop.style.display = 'none'
 })
 
+//Retroceso OP CONTRASTE =>MENUTEXTO//
+const rtrcontraste = document.querySelector('.rtrcontraste')
+
+rtrcontraste.addEventListener('click', ()=> {
+    seltxtop.style.display = 'flex';
+    slcopcont.style.display = 'none'
+    
+})
+
 
 //BOTON DE MENU DE TEXTO HACIA OPCIONES DE VOZ //
 
@@ -112,7 +144,18 @@ slcoptmn.style.display ='none';
 //mostrar opciones de tamano al hacer click en boton de tamano //
 slcbtnoptxt2.addEventListener('click', () =>{
     slcoptmn.style.display = 'flex'
+    seltxtop.style.display = 'none'
 })
+
+//Retroceso OP TEXTO A MENU DE VOZ //
+const rtrtamano = document.querySelector('.rtrtamano')
+rtrtamano.addEventListener('click', ()=>{
+    slcoptmn.style.display = 'none'
+    seltxtop.style.display = 'flex'
+})
+
+
+
 
 
 //Reproducir Audio //

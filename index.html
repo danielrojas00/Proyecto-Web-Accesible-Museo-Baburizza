@@ -28,8 +28,14 @@
 </header>
 
 <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+
+
 <div class="juventud">
  <img src="Juventud-Tentada.jpg" alt=" La Juventud Tentada por los Vicios" height="100%" width="100%">
 </div>
@@ -53,9 +59,9 @@
      
         <div class="tituloopaudio">
             Audio
+            <div class="rtraudio"> <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="15px" width="15px"></div>
+           
         </div>
-
-    
     <div class="playpausa">
      <div class="play" onclick="playaudio2()" type="button"><img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
      <div class="pausar"  onclick="pauseaudio2()" type="button"><img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
@@ -63,6 +69,7 @@
         <source src="the-introvert-michael-kobrin-10959.mp3" type="Audio/mpeg">
         </audio>
     </div>
+
 
     <div class="contenedorprogreso">  
    <input type="range" value="0"  class="progreso" oninput="updateProgress(this.value)"> 
@@ -85,7 +92,7 @@
 <div class="cajaopvelocidad"> 
     <div class="velocidadtitulo">
         Velocidad
-        <div class="flecharetroceso" id="flecharetroceso"><img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px"> </div>
+        <div class="rtropvelocidad"><img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px"> </div>
     </div>
     <div class="velocidadopcion1">x1.0</div>
     <div class="velocidadopcion2">x1.5</div>
@@ -96,7 +103,7 @@
     
     <div class="voztitulo">
         Tipo de Voz
-        <div class="flecharetroceso" id="flecharetroceso">
+        <div class="rtrvoz" id="flecharetroceso">
         <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
     </div>
     </div>
@@ -107,7 +114,7 @@
 <div class="cajaoptexto"> 
         <div class="textotitulo">
             Texto
-            <div class="flecharetroceso">
+            <div class="rtrtexto">
             <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
         </div>
         </div>
@@ -118,7 +125,7 @@
 <div class="cajaopcontraste">
         <div class="contrastetitulo">
             Contraste de Fondo
-            <div class="flecharetroceso">
+            <div class="rtrcontraste">
             <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
         </div>
         </div>
@@ -133,8 +140,8 @@
 <div class="cajaoptamano">
             <div class="tamanotitulo">
             Tamaño
-            <div class="flecharetroceso">
-            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px">
+            <div class="rtrtamano">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
             </div>
             </div>
             <div class="tamanoopcion1">
@@ -152,13 +159,15 @@
    <div id="datos-obra"></div>
 
 
+
+
       <div class="contenedor-up">
         <div class="iconodeubicacion"><img src="location_on_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px"></div>
         <div class="txt-up">Ubicación de pintura</div>
       </div>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
-</style>
+
+
+      
 
 
 <div class="obrasSimilares">
@@ -239,26 +248,7 @@
     .slider-btn-container .slider-btn.next {
       margin-left: 10px;
     }
-    
-    .slider-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s;
-      pointer-events: none;
-    }
-    
-    .slider-container:hover .slider-overlay {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
+        
     
     .slider-container:hover .slider-btn-container .slider-btn {
       background-color: rgba(0, 0, 0, 0.7);
@@ -346,33 +336,40 @@
 </html>
 
 
-
-
 <script>
     fetch('datosdeobra.json')
   .then(response => response.json())
   .then(data => {
     // Accede a los datos del archivo JSON y genera el contenido HTML
     const titulo = data.Titulo;
-    const descripcion = data.Descripcion;
     const autor = data.Autor;
     const coleccion = data.Coleccion;
     const dimensiones = data.Dimensiones;
     const tecnica = data.Tecnica;
+    const descripcion = data.Descripcion;
     const datosObraDiv = document.getElementById('datos-obra');
-    datosObraDiv.innerHTML = `
-    <h2>${titulo}</h2>
-    <p>${descripcion}</p>
-    <p>Autor:${autor}</p>
-    <p> Colección:${coleccion} </p>
-    <p> Dimensiones${dimensiones} </p>
-    <p> Técnica:${tecnica} </p>
+    datosObraDiv.innerHTML = `  
+    <div class="tituloObra">${titulo}</div>
+      <div class="datosobras">
+
+        <div>Autor: <b>${autor}</b>   </div>
+        <div>Colección:   <b>${coleccion}</b>  </div>
+        <div> Dimensiones: <b>${dimensiones}</b>  </div>
+        <div> Técnica: <b>${tecnica}</b> </div>
+
+      </div>
+
+     <div class= "descripcionObra">${descripcion} </div>
     `;
   })
   .catch(error => {
     console.error('Error al cargar los datos:', error);
   });
 </script>
+
+<audio>
+  <source src="Voz Hombre 1.0.mp3" type="Audio/mpeg">
+</audio>
 
 <script src="Interaccion.js"> </script>
 
