@@ -694,3 +694,24 @@ html {font-size: 100%;} /*16px*/
   font-size: 16px;
   color: #999999;
 }
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #3B2C21;
+}
+.texto1, .texto2, .texto3,  .texto4 {
+  color: #ffffff;
+  font-weight: 700;
+  align-items: center;
+  padding-top: 10px;
+}
+
+
+.botonesaudio1-0{
+ transform: translateY(300px);
+}

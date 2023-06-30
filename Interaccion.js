@@ -368,3 +368,4 @@ playbtn.addEventListener('click', ()=>{
   pausebtn.style.display = 'flex'
   playbtn.style.display = 'none'
 })
+
