@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100vw, initial-scale=1">
+     <title> Museo Baburizza Accesible</title>
+    </head>
+
+    <header>
+  <div class="menunaveg">
+        <div class="logo"> <a href="#">
+        <img src="LOGO BABURIZZA DEF.png" alt="Logo Palacio Baburizza" width="100px" height="40px"> </a>
+        </div>
+        <div class="busqueda">
+            <a href="#"> <img src="iconobusqueda400wgt.svg" alt="Búsqueda"  width="24px" height="24px"> </a>
+        </div>
+    </div>
+
+<ul class="menuresponsive">
+            <li class="logoresponsive"> <a href="#">
+            <img src="LOGO BABURIZZA DEF.png" alt="Logo Palacio Baburizza" width="100px" height="40px"> </a>
+            </li>
+            <li class="busquedaresponsive">
+                <a href="#"> <img src="iconobusqueda400wgt.svg" alt="Búsqueda"  width="24px" height="24px"> </a>
+            </li>
+        </ul>
+</header>
+
+<body class="bodyoscuro">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleoscuro.css"/>
+
+
+
+
+</div>
+<div class="juventud">
+ <img src="Juventud-Tentada.jpg" alt=" La Juventud Tentada por los Vicios" height="100%" width="100%">
+</div>
+
+
+<div class="contenedordebotones"> 
+    <div class="botondetexto">
+        <div class="iconotexto"> <img src="edit_FILL0_wght400_GRAD0_opsz48.svg" height="20px"  width="20px">
+        </div>
+        <div class="textodeboton">Texto</div>
+    </div>
+    <div class="botondeaudio">
+            <div class="iconodeaudio"> <img src="edit_FILL0_wght400_GRAD0_opsz48.svg" height="20px" width="20px">
+            </div>
+            <div class="textodeaudio"> Audio</div>
+    </div>
+</div> 
+
+</div>
+<div class="opaudio"> 
+     
+        <div class="tituloopaudio">
+            Audio
+            <div class="rtraudio"> <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="15px" width="15px"></div>
+           
+        </div>
+    <div class="playpausa">
+     <div class="play" onclick="playaudio2()" type="button"><img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+     <div class="pausar"  onclick="pauseaudio2()" type="button"><img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+        <audio id="Audio1">
+        <source src="Voz Neutral 1.0.mp3" type="Audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="contenedorprogreso">  
+   <input type="range" value="0"  class="progreso" oninput="updateProgress(this.value)"> 
+  
+   </div>
+   <div class="tiempos">
+        <span class="tiempoactual">0:00</span>
+        <span class="tiempototal">0:00</span>
+        </div>
+        
+    <div class="contenedordeVoz" >
+            <div class="textovoz">Tipo de Voz</div>
+        </div>
+        <div class="contenedordeVelocidad">
+            <div class="textovelocidad"> Velocidad </div>  
+        </div>
+        
+ </div>
+
+<div class="cajaopvelocidad"> 
+    <div class="velocidadtitulo">
+        Velocidad
+        <div class="rtropvelocidad"><img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px"> </div>
+    </div>
+    <div class="velocidadopcion1">x1.0</div>
+    <div class="velocidadopcion2">x1.5</div>
+    <div class="velocidadopcion3">x2.0</div>
+</div>
+
+<div class="cajaopvoz" id="cajaopvoz"> 
+    <div class="voztitulo">
+        Tipo de Voz
+        <div class="rtrvoz" id="flecharetroceso"> <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px"> </div>
+    </div>
+    <div class="vozopcion1">Por Defecto</div>
+    <div class="vozopcion2">Femenina</div>
+    <div class="vozopcion3">Masculina</div>
+</div>
+<div class="cajaoptexto"> 
+        <div class="textotitulo">
+            Texto
+            <div class="rtrtexto">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+        </div>
+        </div>
+        <div class="textoopcion1"> Contraste de Fondo</div>
+        <div class="textoopcion2">Tamaño</div>
+</div>
+
+<div class="cajaopcontraste">
+        <div class="contrastetitulo">
+            Contraste de Fondo
+            <div class="rtrcontraste">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+        </div>
+        </div>
+        <div class="contrasteopcion1">
+            Claro
+        </div>
+        <div class="contrasteopcion2">
+            Oscuro
+        </div>
+</div>
+
+<div class="cajaoptamano">
+            <div class="tamanotitulo">
+            Tamaño
+            <div class="rtrtamano">
+            <img src="arrow_drop_up_FILL0_wght400_GRAD0_opsz48.svg" height="14px" width="14px">
+            </div>
+            </div>
+            <div class="tamanoopcion1">
+                Por Defecto
+            </div>
+            <div class="tamanoopcion2">
+                Grande
+            </div>
+            <div class="tamanoopcion3">
+               Muy Grande
+            </div>
+</div>
+
+
+   <div id="datos-obra"></div>
+
+      <div class="contenedor-up">
+        <div class="iconodeubicacion"><img src="location_on_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px"></div>
+        <div class="txt-up">Ubicación de pintura</div>
+      </div>
+<div class="obrasSimilares">
+        <div class="textoobrassimilares">
+            <h2>Obras Similares</h2>
+            <p> Cuadros y Esculturas que podrían Interesarte</p>
+</div>
+
+<div class="linkb">
+    <div class="linka">
+     Volver a <u>museobaburizza.cl</u>
+    </div>
+</div>
+
+<div class="carousel-wrapper">
+  <div class="carousel">
+    <div class="carousel__track">
+      <div class="carousel__card">
+        <img src="antiguo_muelle_prat_-_thomas_jacques_somerscales.tif_.jpg" alt="Imagen 1" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 1</h2>
+        <p class="carousel__author">Autor de la Imagen 1</p>
+      </div>
+      <div class="carousel__card">
+        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Imagen 2" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 2</h2>
+        <p class="carousel__author">Autor de la Imagen 2</p>
+      </div>
+      <div class="carousel__card">
+        <img src="marina_de_valparaiso_-_alberto_valenzuela_llanos.jpg" alt="Imagen 3" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 3</h2>
+        <p class="carousel__author">Autor de la Imagen 3</p>
+      </div>
+      <div class="carousel__card">
+        <img src="panoramica_de_valparaiso_-_thomas_j._somerscales.jpg" alt="Imagen 4" class="carousel__image">
+        <h2 class="carousel__title">Título de la Imagen 4</h2>
+        <p class="carousel__author">Autor de la Imagen 4</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+    fetch('datosdeobra.json')
+  .then(response => response.json())
+  .then(data => {
+    // Accede a los datos del archivo JSON y genera el contenido HTML
+    const titulo = data.Titulo;
+    const autor = data.Autor;
+    const coleccion = data.Coleccion;
+    const dimensiones = data.Dimensiones;
+    const tecnica = data.Tecnica;
+    const descripcion = data.Descripcion;
+    const datosObraDiv = document.getElementById('datos-obra');
+    datosObraDiv.innerHTML = `  
+    <div class="tituloObra">${titulo}</div>
+      <div class="datosobras">
+
+        <div>Autor: <b>${autor}</b>   </div>
+        <div>Colección:   <b>${coleccion}</b>  </div>
+        <div> Dimensiones: <b>${dimensiones}</b>  </div>
+        <div> Técnica: <b>${tecnica}</b> </div>
+
+      </div>
+
+     <div class= "descripcionObra">${descripcion} </div>
+    `;
+  })
+  .catch(error => {
+    console.error('Error al cargar los datos:', error);
+  });
+</script>
+
+<div class="botonesaudio1-0">
+  <div class="audio1-0vol"> <img src="volume_up_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+  <div class="audio1-0pause"><img src="pause_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+  <div class="audio1-0play"><img src="play_circle_FILL0_wght400_GRAD0_opsz48.svg" height="40px" width="40px"></div>
+  <audio class="audiomujer"><source src="Voz Mujer 1.0.mp3"></audio>
+  <audio class="audio10"> <source src="Voz Hombre 1.0.mp3"> </audio>
+  <audio class="audio15"><source src="Voz hombre 1.5.mp3"></audio>
+  <audio class=" audio20"> <source src="Voz Hombre 2.0.mp3"></audio>
+</div>
+
+<div class="footer">
+  <div class="texto1">Museo</div>
+  <div class="texto2">Institucional </div>
+  <div class="texto3">Corporación   </div>
+  <div class="texto4">Colección     </div>
+</div>
+
+
+<script src="Interaccion.js"> </script>
+
+</body>
+</html>
