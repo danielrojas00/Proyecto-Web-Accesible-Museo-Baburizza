@@ -648,7 +648,7 @@ html {font-size: 100%;} /*16px*/
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-
+  padding-top: 20px;
 }
 
 .carousel__track {
@@ -692,7 +692,8 @@ html {font-size: 100%;} /*16px*/
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #3B2C21;
+  background-color: #003C2E;
+  width: 100%;
 }
 .texto1, .texto2, .texto3,  .texto4 {
   color: #ffffff;
@@ -701,7 +702,10 @@ html {font-size: 100%;} /*16px*/
   padding-top: 10px;
 }
 
-
 .botonesaudio1-0{
- transform: translateY(300px);
+ transform: translate(230px,90px);
+position: relative;
+height: 40px;
+background-color: #003C2E;
+z-index:  20;
 }
