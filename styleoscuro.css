@@ -52,7 +52,7 @@ html {font-size: 100%;} /*16px*/
   margin-bottom: 20px;
   padding-bottom: 20px;
   padding-top: 20px;
-  border-color: #003C2E;
+  border-color: #ffffff;
   border-style: solid;
   border-width: 2px;
   border-left: none;
@@ -67,6 +67,7 @@ html {font-size: 100%;} /*16px*/
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  color: #ffffff;
 }
 .descripcionObra{
   margin-left: 20px;
@@ -169,16 +170,18 @@ html {font-size: 100%;} /*16px*/
     padding: 20px;
     height: 100%;
     width: auto;
-    background-color: gray;
     border-radius: 8px 8px;
-    border-color: #003C2E;
-    margin: 20px;
+    border-color: #ffffff;
+    border-style: solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   .linka{
     color: #ffffff;
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-weight: bold;
     text-align: center;
+    border-color: #ffffff;
   }
 
 .obrasSimilares{
@@ -186,6 +189,7 @@ html {font-size: 100%;} /*16px*/
   font-size: 1em;
   padding-left: 20px;
   padding-right: 20px;
+  color: #ffffff;
 }
 
 
@@ -618,14 +622,14 @@ html {font-size: 100%;} /*16px*/
   flex-direction: row;
   height: 50px;
   width: auto;
-  background-color: #3B2C21;
+  background-color: #ffffff;
   border-radius: 8px;
   margin: 30px 20px 10px 20px;
   justify-content: center;
   align-items: center;
 }
 .txt-up{
-  color: #ffffff;
+  color: #003C2E;
   font-weight: 700;  
   font-size: 1em;
   padding-left: 5px;
@@ -646,6 +650,7 @@ html {font-size: 100%;} /*16px*/
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  margin-top: 10px;
 }
 
 .carousel__track {
