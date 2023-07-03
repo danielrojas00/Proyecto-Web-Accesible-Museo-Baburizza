@@ -706,6 +706,5 @@ html {font-size: 100%;} /*16px*/
  transform: translate(230px,90px);
 position: relative;
 height: 40px;
-background-color: #003C2E;
 z-index:  20;
 }
