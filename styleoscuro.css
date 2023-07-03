@@ -57,6 +57,7 @@ html {font-size: 100%;} /*16px*/
   border-width: 2px;
   border-left: none;
   border-right: none;
+  color: #ffffff;
 }
 
 .tituloObra{
@@ -72,6 +73,7 @@ html {font-size: 100%;} /*16px*/
   margin-right: 20px;
   font-size: 20px;
   margin-bottom: 30px;
+  color: #ffffff;
 }
 
 
