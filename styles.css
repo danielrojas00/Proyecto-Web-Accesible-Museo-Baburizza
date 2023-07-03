@@ -62,7 +62,7 @@ html {font-size: 100%;} /*16px*/
   font-size: 32px;
   font-weight: 700;
   font-family: 'Atkinson Hyperlegible', sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -72,8 +72,6 @@ html {font-size: 100%;} /*16px*/
   font-size: 20px;
   margin-bottom: 30px;
 }
-
-
 
 
 .contenedordebotones{
@@ -237,7 +235,7 @@ html {font-size: 100%;} /*16px*/
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 220px;
+  gap: 200px;
   color: #ffffff;
   margin-bottom: 10px;
   font-size: 0.8em;
@@ -291,11 +289,7 @@ html {font-size: 100%;} /*16px*/
   margin: 0px 20px 0 20px;
   font-size: 1.25em;
   font-weight: 600;
-  letter-spacing: 0.02em;
 }
-
-
-
 
 
 
@@ -366,13 +360,9 @@ html {font-size: 100%;} /*16px*/
   border-top-width: 0.05em;
 }
 
-
-
-
-
-
 .cajaopvoz{
-  color: #3B2C21;
+  display: flex;
+  flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
   border-color: #3B2C21;
@@ -380,59 +370,55 @@ html {font-size: 100%;} /*16px*/
   height: 240px;
   width: auto;
   border-radius: 8px;
-  background-color: #FFE4CB;
 }
 
-.voztitulo .flecharetroceso{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.voztitulo .rtrvoz{
   padding-left: 20px;
 }
 .cajaopvoz .voztitulo{
+  background-color: #3B2C21;
   display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  background-color: #3B2C21;
   justify-content: center;
   align-items: center;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  font-size: 1.125em;
-  font-weight: bold;
-  width: auto;
-  height: 40px;
   color: #ffffff;
-  background-color: #3B2C21;
+  height: 40px;
+  font-weight: 700;
 }
 .cajaopvoz .vozopcion1{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1.125em;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  width:auto;
   height: 67px;
+  border-color: #3B2C21;
+  border-style: solid;
+  border-width: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .cajaopvoz .vozopcion2{
-  display:flex ;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1.125em;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  width: auto;
   height: 67px;
-  border-top: #3B2C21;
-  border-top-style: solid;
-  border-top-width: 0.05em;
+  border-color: #3B2C21;
+  border-style: solid;
+  border-width: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .cajaopvoz .vozopcion3{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1.125em;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  width: auto;
   height: 67px;
-  border-top: #3B2C21;
-  border-top-style: solid;
-  border-top-width: 0.05em;
 }
 
 
