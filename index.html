@@ -219,7 +219,30 @@
   .catch(error => {
     console.error('Error al cargar los datos:', error);
   });
+  const tamanoOpcion1 = document.querySelector('.tamanoopcion1');
+        const tamanoOpcion2 = document.querySelector('.tamanoopcion2');
+        const tamanoOpcion3 = document.querySelector('.tamanoopcion3');
 
+        // Agregar evento de clic a cada elemento
+        tamanoOpcion1.addEventListener('click', cambiarTamanioTituloObra);
+        tamanoOpcion2.addEventListener('click', cambiarTamanioTituloObra);
+        tamanoOpcion3.addEventListener('click', cambiarTamanioTituloObra);
+
+        function cambiarTamanioTituloObra() {
+            // Obtener el elemento con la clase "tituloObra"
+            const tituloObra = document.querySelector('.tituloObra');
+
+            // Obtener el tamaño de fuente según la clase del elemento clicado
+            const tamanoFuente = this.classList.contains('tamanoopcion1')
+                ? '18px'
+                : this.classList.contains('tamanoopcion2')
+                    ? '22px'
+                    : '26px';
+
+            // Cambiar el tamaño de fuente del elemento
+            tituloObra.style.fontSize = tamanoFuente;
+        }
+    </script>
 
 </script>
 </script>
