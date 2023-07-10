@@ -227,13 +227,8 @@ const pausebtn= document.querySelector('.audio1-0pause')
 const playbtn = document.querySelector('.audio1-0play')
 
 const audio10 = document.querySelector('.audio10')
-const velaudio1= document.querySelector('.velocidadopcion1')
 
-const velaudio2= document.querySelector('.velocidadopcion2')
-const audio15= document.querySelector('.audio15')
 
-const velaudio3 = document.querySelector('.velocidadopcion3')
-const audio20 = document.querySelector('.audio20')
 
 
 playbtn.style.display='none'
@@ -245,52 +240,116 @@ spkbtn.addEventListener('click', ()=>{
     pausebtn.style.display='flex';
     audio10.play();
 })
-
-
-
-
-//Primera opcion//
-// entramos desde el boton de audio x1.0  para reproducir MOSTRAR//
-velaudio1.addEventListener('click', ()=>{
-  audio10.play();
-  audio15.pause(); // para que no se reproduzcan al mismo tiempo//
-  audio20.pause();
-  spkbtn.style.display = 'none'
-  pausebtn.style.display = 'flex'
-  if (pausebtn === 'flex'){
-    playbtn.style.display = 'none'}
-})
-
-pausebtn.addEventListener('click',()=>{
+pausebtn.addEventListener('click', ()=>{
   audio10.pause();
-  pausebtn.style.display = 'none'
+  pausebtn.style.display= 'none'
   playbtn.style.display = 'flex'
 })
 playbtn.addEventListener('click', ()=>{
-  audio10.play();
+  audio10.play()
+  playbtn.style.display='none'
   pausebtn.style.display = 'flex'
-  playbtn.style.display = 'none'
 })
-//Segunda Opcion // 
 
-velaudio2.addEventListener('click', ()=>{
-  audio15.play();
-  audio10.pause(); // para que no se reproduzcan al mismo tiempo//
-  audio20.pause();
+// desde 1.5//
+const pausavelocidad = document.querySelector('.pausavelocidad')
+const playvelocidad =document.querySelector('.playvelocidad')
+playvelocidad.style.display ='none';
+pausavelocidad.style.display ='none';
+const slcaudio10 = document.querySelector('.velocidadopcion2')
+const Audio20 = document.querySelector('.audio15')
+
+slcaudio10.addEventListener('click', ()=>{
+  Audio20.play();
+  playbtn.style.display='none'
+  pausebtn.style.display = 'none'
   spkbtn.style.display = 'none'
-  pausebtn.style.display = 'flex'
-  if (pausebtn === 'flex'){
-    playbtn.style.display = 'none'}
+
+  pausavelocidad.style.display='flex'
+})
+pausavelocidad.addEventListener('click', ()=>{
+  Audio20.pause();
+  pausavelocidad.style.display='none'
+  playvelocidad.style.display = 'flex'
+})
+playvelocidad.addEventListener('click', ()=>{
+    Audio20.play();
+})
+//Audio 2.0//
+const slcplay = document.querySelector('.playvelocidad2')
+const slcvelocidad2 = document.querySelector('.pausavelocidad2')
+const slcaudio30 = document.querySelector('.velocidadopcion3')
+const slcaudio2 = document.querySelector('.audio20')
+
+slcplay.style.display='none'
+slcvelocidad2.style.display= 'none'
+
+slcaudio30.addEventListener('click', ()=>{
+    slcaudio2.play();
+    playbtn.style.display='none'
+    pausebtn.style.display = 'none'
+    spkbtn.style.display = 'none'
+    pausavelocidad.style.display='none'
+    playvelocidad.style.display = 'none'
+    slcvelocidad2.style.display='flex'
 })
 
-pausebtn.addEventListener('click',()=>{
-  audio15.pause();
+slcvelocidad2.addEventListener('click', ()=>{
+  slcaudio2.pause();
+  slcplay.style.display = 'flex'
+  slcvelocidad2.style.display='none'
+  playbtn.style.display='none'
   pausebtn.style.display = 'none'
-  playbtn.style.display = 'flex'
+  spkbtn.style.display = 'none'
+  pausavelocidad.style.display='none'
+  playvelocidad.style.display = 'none'
 })
-playbtn.addEventListener('click', ()=>{
-  audio15.play();
-  pausebtn.style.display = 'flex'
-  playbtn.style.display = 'none'
+slcplay.addEventListener('click', ()=>{
+  slcaudio2.play();
+  slcplay.style.display = 'none'
+  slcvelocidad2.style.display = 'flex'
+})
+//Audio 1.0//
+
+const slcaudio100 = document.querySelector('.audio10')
+const slcplay3 = document.querySelector('.playvelocidad3')
+const slcvpausa3 = document.querySelector('.pausavelocidad3')
+const slcvelocidad1 = document.querySelector('.velocidadopcion1')
+
+slcplay3.style.display='none'
+slcvpausa3.style.display='none'
+
+slcvelocidad1.addEventListener('click',()=>{
+  slcaudio100.play();
+  slcvpausa3.style.display = 'flex'
+  slcplay.style.display = 'none'
+  slcvelocidad2.style.display='none'
+  playbtn.style.display='none'
+  pausebtn.style.display = 'none'
+  spkbtn.style.display = 'none'
+  pausavelocidad.style.display='none'
+  playvelocidad.style.display = 'none'
 })
 
+slcvpausa3.addEventListener('click', ()=>{
+  slcaudio100.pause();
+    slcvpausa3.style.display='none'
+  slcplay3.style.display='flex'
+  slcplay.style.display = 'none'
+  slcvelocidad2.style.display='none'
+  playbtn.style.display='none'
+  pausebtn.style.display = 'none'
+  spkbtn.style.display = 'none'
+  pausavelocidad.style.display='none'
+  playvelocidad.style.display = 'none'
+})
+slcplay3.addEventListener('click', ()=>{
+  slcaudio100.play();
+  slcplay.style.display = 'none'
+  slcvelocidad2.style.display='none'
+  playbtn.style.display='none'
+  pausebtn.style.display = 'none'
+  spkbtn.style.display = 'none'
+  pausavelocidad.style.display='none'
+  playvelocidad.style.display = 'none'
+})

@@ -1,8 +1,9 @@
 
 html {font-size: 100%;} /*16px*/
 
-.botonesaudio1-0{
-  background-color: #003C2E;
+botonesaudio1-0{
+  width: 100px;
+  height: 10px;
 }
 .menunaveg{
     background-color: #003C2E;
@@ -436,11 +437,17 @@ margin-top: 20px;
   border-top-style: solid;
   border-top-width: 0.05em;
 }
-.linkcontraste{
-  appearance: none;
-  -webkit-appearance: none;
+.ubicar{
   text-decoration: none;
-  color:#003C2E;
+  color: #ffffff;
+ }
+
+a{
+  text-decoration: none;
+  color: #B33232;
+}
+.linkcontraste{
+  color: #003C2E;
 }
 
 .cajaoptamano{
@@ -580,24 +587,23 @@ margin-top: 20px;
   color: #999999;
 }
 
-.footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #003C2E;
-  width: 100%;
-}
-.texto1, .texto2, .texto3,  .texto4 {
-  color: #ffffff;
-  font-weight: 700;
-  align-items: center;
-  padding-top: 10px;
-}
-
 .botonesaudio1-0{
- transform: translate(230px,90px);
-position: relative;
-height: 40px;
-z-index:  20;
+height: 10px;
+position: absolute;
+transform: translate(240px,50px);
 }
+.icvelocidad{
+ height: 10px;
+position: absolute;
+transform: translate(240px,-2107px);
+}
+.icvelocidad2{
+  height: 10px;
+ position: absolute;
+ transform: translate(240px,-2107px);
+ }
+ .icvelocidad3{
+  height: 10px;
+ position: absolute;
+ transform: translate(240px,-2107px);
+ }
