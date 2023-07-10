@@ -191,7 +191,7 @@ html {font-size: 100%;} /*16px*/
  .opaudio {
     display: flex;
     flex-direction:column;
-    height: 240px;
+    height: 180px;
     width: auto;
     border: #003C2E;
     border-style:solid;
@@ -219,29 +219,7 @@ html {font-size: 100%;} /*16px*/
   align-items: center;
   margin-top: 20px;
 }
-.contenedorprogreso{
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.progreso{
-  height: 3px;
-  width: 100%;
-  color: #ffffff;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.tiempos{
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 0.8em;
-}
+
 .contenedordeVelocidad{
   display: flex;
   justify-content: center;
@@ -264,34 +242,12 @@ html {font-size: 100%;} /*16px*/
   font-size: 1.25em;
   font-weight: 600;
   letter-spacing: 0.02em;
+margin-top: 20px;
 }
 .rtropvelocidad{
   padding: 10px;
 }
 
-.contenedordeVoz{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.textovoz{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  border-style: solid;
-  border-radius: 8px;
-  border-width: 2px;
-  border-color: #ffffff;
-  height: 40px;
-  width: 100%;
-  margin: 0px 20px 0 20px;
-  font-size: 1.25em;
-  font-weight: 600;
-}
 
 
 
@@ -361,69 +317,6 @@ html {font-size: 100%;} /*16px*/
   border-top-style: solid;
   border-top-width: 0.05em;
 }
-
-.cajaopvoz{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-color: #003C2E;
-  border-style: solid;
-  height: 240px;
-  width: auto;
-  border-radius: 8px;
-}
-
-.voztitulo .rtrvoz{
-  padding-left: 20px;
-}
-.cajaopvoz .voztitulo{
-  background-color: #003C2E;
-  display: flex;
-  flex-direction: row;
-  row-gap: 10px;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  height: 40px;
-  font-weight: 700;
-}
-.cajaopvoz .vozopcion1{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 67px;
-  border-color: #003C2E;
-  border-style: solid;
-  border-width: 2px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.cajaopvoz .vozopcion2{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 67px;
-  border-color: #003C2E;
-  border-style: solid;
-  border-width: 2px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.cajaopvoz .vozopcion3{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 67px;
-}
-
-
-
 
 .cajaoptexto{
   display: flex;

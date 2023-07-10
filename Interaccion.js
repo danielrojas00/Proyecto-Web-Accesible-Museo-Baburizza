@@ -52,35 +52,6 @@ rtropvelocidad.addEventListener('click', ()=>{
 
 
 
-
-//OPCIONES DE AUDIO => TIPO DE VOZ//
-
-//Seleccionar//
-const btnvoz = document.querySelector('.contenedordeVoz')
-const opvoz= document.querySelector('.cajaopvoz')
-
-//ocultar opciones de Tipo de Voz//
-opvoz.style.display = 'none'
-
-//click en boton de Tipo de Voz y mostrar Opciones de Voz//
-btnvoz.addEventListener('click', ()=>{
-    opvoz.style.display = 'flex';
-})
-
-//Ocultar opciones anteriores//
-btnvoz.addEventListener('click', ()=>{
-    modificar.style.display = 'none'
-})
-//RETROCESO TIPO DE VOZ A OP Audio//
-const rtrvoz = document.querySelector('.rtrvoz')
-rtrvoz.addEventListener('click', ()=>{
-    opvoz.style.display = 'none';
-    modificar.style.display='flex'
-})
-
-
-
-
 // BOTON TEXTO HACIA MENU TEXTO //
 
 //seleccionar boton//
@@ -191,52 +162,6 @@ pausa.addEventListener('click',()=>{
 })
 
 
-//duracion//
-
-const Progreso = document.querySelector('.progreso')
-const tiempoActual = document.querySelector('.tiempoactual')
-const Total = document.querySelector ('.tiempototal')
-
-function updateProgress(value) {
-    const tiempoActual = document.querySelector('.tiempoactual');
-    tiempoActual.textContent = formatTime(value);
-  }
-function Musica (){ 
-Progreso.value = 0;
-tiempoActual.innerHTML = '00:00';
-setTimeout(()=> {
-    Progreso.max = audio2.duration;
-    Total.innerHTML = formatTime(audio2.duration);
-},300);
-setInterval(() => {
-    Progreso.value = audio2.currentTime;
-    tiempoActual.innerHTML = formatTime(audio2.currentTime);
-
-}, 500);
-Progreso.addEventListener('change', () =>{
-    audio2.currentTime = Progreso.value;
-})
-
-function updateProgress(value) {
-    const tiempoActual = document.querySelector('.tiempoactual');
-    tiempoActual.textContent = formatTime(value);
-  }
-
-// Tiempo en formato de Minutos y segundos//
-
-const formatTime = (time) =>{
-    let min = Math.floor (time / 60);
-    if( min < 10 ){
-        min = `0${min}`;
-    }
-    let sec = Math.floor(time % 60);
-    if (sec<10){
-        sec = `0${sec}`;
-    }
-    return `${min} : ${sec} `;
-}
-}
-Musica();
 
 
 const carouselTrack = document.querySelector('.carousel__track');
@@ -368,5 +293,4 @@ playbtn.addEventListener('click', ()=>{
   pausebtn.style.display = 'flex'
   playbtn.style.display = 'none'
 })
-
 
